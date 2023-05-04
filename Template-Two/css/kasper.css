@@ -823,3 +823,124 @@ header nav .form i {
     margin-bottom: 20px;
     display: block;
 }
+
+.quote q::before{
+    content: "\f10d";
+    font-family: "FontAwesome";
+    margin-right: 15px;
+    position: relative;
+    top: -6px;
+    left: 13px;
+}
+.quote q::after{
+    content: "\f10e";
+    font-family: "FontAwesome";
+    position: relative;
+    top: -3px;
+}
+
+/* PRICING */
+.pricing{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.pricing .container .plans{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap:30px ;
+}
+@media (max-width:1199px) {
+    .pricing .container .plans{
+        grid-template-columns: repeat(auto-fill,minmax(295px,1fr));
+        gap:30px ;
+    }
+}
+@media (max-width:767px) {
+    .pricing .container .plans{
+        grid-template-columns: repeat(auto-fit, 1fr);
+
+        gap:50px ;
+    }
+}
+.pricing .container .plans .plan{
+    background-color: #fcfcfc;
+    text-align: center;
+    
+}
+.pricing .container .plans .plan .head{
+    padding: 20px 40px;
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+.pricing .container .plans .plan .head h3{
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.pricing .container .plans .plan .head span{
+    font-weight: bold;
+    font-size: 60px;
+}
+.pricing .container .plans .plan .head span::before{
+    content: "$";
+    font-size: 24px;
+    position: relative;
+    top: -36px;
+    margin-right: 10px;
+    font-weight: normal;
+
+}
+.pricing .container .plans .plan .head span::after{
+    content: "/MO";
+    font-size: 19px;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+.pricing .container .plans .plan ul{
+    border-bottom: 1px solid var(--main-color);
+    
+}
+.pricing .container .plans .plan ul li{ 
+    padding: 20px;
+    position: relative;
+}
+.pricing .container .plans .plan ul li:not(:last-child)::after{
+    content: "";
+    width: 120px;
+    height: 1px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+
+
+
+.pricing .container .plans .plan  .foot a{
+    display: block;
+    padding: 10px 20px;
+    border: 1px solid var(--main-color);
+    text-decoration: none;
+    width: fit-content;
+    margin: 30px auto;
+}
+
+.pricing  .contact-text{
+    text-align: center;
+    margin: 50px auto 20px;
+    font-weight: 20px;
+}
+.pricing  .contact-link{
+    display: block;
+    text-decoration: none;
+    background-color: var(--main-color);
+    color: #fff;
+    width: fit-content;
+    text-align: center;
+    margin: 20px auto;
+    padding: 15px 30px;
+    
+}
